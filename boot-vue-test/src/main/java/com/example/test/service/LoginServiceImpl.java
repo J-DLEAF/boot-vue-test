@@ -21,9 +21,9 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public User getuser() {
+	public User getuser(String userid) {
 		// TODO Auto-generated method stub
-		return usermapper.getuser();
+		return usermapper.getuser(userid);
 	}
 
 }

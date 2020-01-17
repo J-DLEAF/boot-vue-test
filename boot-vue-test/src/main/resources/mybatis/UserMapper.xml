@@ -10,6 +10,6 @@
 	<select id="getuser" resultType="User">
 		select *
 		from test.users
-		where userid = '1234'
+		where userid = ${userid}
 	</select>
 </mapper>

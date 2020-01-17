@@ -20,8 +20,8 @@ public class LoginController {
 	@GetMapping("/test")
 	public String getUser(Model model) {
 //		List<User> user = service.getuserlist();
-		User user = service.getuser();
-		model.addAttribute("user", user);
+//		User user = service.getuser();
+//		model.addAttribute("user", user);
 		return "test";
 	}
 
@@ -32,7 +32,21 @@ public class LoginController {
 
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model model) {
-		System.out.println("!!!!!!!!!!");
-		return "index";
+		User loginuser = service.getuser(user.getUserId());
+		System.out.println(loginuser +"!!!"+ user);
+		if(loginuser==null) {
+			// 등록되지 않은 사용자
+			return "index";
+		}
+		else if(user.getUserId().equals(loginuser.getUserId()) && user.getUserPwd().equals(loginuser.getUserPwd())){
+			//로그인 성공
+			
+			model.addAttribute("user",loginuser);
+			return "test";
+		}
+		else {
+			//패스워드 불일치
+			return "index";
+		}
 	}
 }
