@@ -7,5 +7,5 @@ import com.example.test.model.User;
 public interface LoginService {
 	
 	List<User> getuserlist();
-	User getuser(String userid);
+	User getuser(String userId);
 }

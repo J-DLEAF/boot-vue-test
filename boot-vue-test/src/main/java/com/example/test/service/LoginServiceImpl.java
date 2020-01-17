@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import com.example.test.mapper.UserMapper;
 import com.example.test.model.User;
 
-@Service(value="loginservice")
+@Service
 public class LoginServiceImpl implements LoginService {
-	
+
 	@Autowired
 	private UserMapper usermapper;
 
@@ -21,9 +21,9 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public User getuser(String userid) {
+	public User getuser(String userId) {
 		// TODO Auto-generated method stub
-		return usermapper.getuser(userid);
+		return usermapper.getuser(userId);
 	}
 
 }

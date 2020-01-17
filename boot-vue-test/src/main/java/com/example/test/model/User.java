@@ -7,12 +7,13 @@ public class User {
 	private String name;
 	private String authType;
 
-	public User(String userId, String name, String authType) {
-		super();
-		this.userId = userId;
-		this.name = name;
-		this.authType = authType;
-	}
+//	public User(String userId, String name, String authType, String userPwd) {
+//		super();
+//		this.userId = userId;
+//		this.userPwd = userPwd;
+//		this.name = name;
+//		this.authType = authType;
+//	}
 
 	public String getUserId() {
 		return userId;
