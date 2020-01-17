@@ -5,15 +5,14 @@ public class User {
 	private String userId;
 	private String userPwd;
 	private String name;
-	private String authType;
-
-//	public User(String userId, String name, String authType, String userPwd) {
-//		super();
-//		this.userId = userId;
-//		this.userPwd = userPwd;
-//		this.name = name;
-//		this.authType = authType;
-//	}
+	private String address;
+	public User(String userId, String name, String address, String userPwd) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.name = name;
+		this.address = address;
+	}
 
 	public String getUserId() {
 		return userId;
@@ -39,16 +38,16 @@ public class User {
 		this.name = name;
 	}
 
-	public String getAuthType() {
-		return authType;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAuthType(String authType) {
-		this.authType = authType;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userPwd=" + userPwd + ", name=" + name + ", authType=" + authType + "]";
+		return "User [userId=" + userId + ", userPwd=" + userPwd + ", name=" + name + ", address=" + address + "]";
 	}
 }

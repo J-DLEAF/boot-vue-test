@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import TodoApp from '@/components/todo/TodoApp'
 import Main from '@/components/Main'
 import Login from '@/components/Login'
+import Join from '@/components/join'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/todoapp',
       name: 'todo-app',
       component: TodoApp
+    },
+    {
+      path: '/join',
+      name: 'join',
+      component: Join
     }
   ]
 })

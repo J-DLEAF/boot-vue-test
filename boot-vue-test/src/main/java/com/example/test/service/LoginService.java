@@ -8,4 +8,5 @@ public interface LoginService {
 	
 	List<User> getuserlist();
 	User getuser(String userId);
+	void joinuser(User user);
 }

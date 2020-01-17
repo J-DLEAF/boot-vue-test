@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.test.mapper.UserMapper">
-	
+
 	<select id="getuserlist" resultType="User">
 		select *
 		from test.users
 	</select>
-	
+
 	<select id="getuser" resultType="User">
 		select *
 		from test.users
-		where userid = '1234'
+		where
+		userId = #{userId}
 	</select>
+
+	<insert id="joinuser">
+		insert into test.users (`userid`, `userpwd`, `name`, `address`) values (#{userId},#{userPwd},#{name},#{address});
+	</insert>
 </mapper>

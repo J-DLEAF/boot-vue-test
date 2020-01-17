@@ -10,4 +10,5 @@ import com.example.test.model.User;
 public interface UserMapper {
 	List<User> getuserlist();
 	User getuser(String userId);
+	void joinuser(User user);
 }

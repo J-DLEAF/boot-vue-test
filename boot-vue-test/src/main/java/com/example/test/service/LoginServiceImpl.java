@@ -26,4 +26,10 @@ public class LoginServiceImpl implements LoginService {
 		return usermapper.getuser(userId);
 	}
 
+	@Override
+	public void joinuser(User user) {
+		// TODO Auto-generated method stub
+		usermapper.joinuser(user);
+	}
+
 }

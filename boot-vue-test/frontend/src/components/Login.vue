@@ -10,6 +10,7 @@
       <br />
       <!-- <p>여기! [[${msg}]] ${msg}</p> -->
       <button @click="todo()">click!</button>
+      <button @click="join()">회원가입!</button>
       <button type="submit">Login</button>
     </form>
 
@@ -23,6 +24,11 @@ export default {
     todo() {
       this.$router.push({
         name: "main" //
+      });
+    },
+    join() {
+      this.$router.push({
+        name: "join"
       });
     }
   },
