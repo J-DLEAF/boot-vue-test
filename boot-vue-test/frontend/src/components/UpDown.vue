@@ -8,12 +8,12 @@
     </transition>
 
     <transition name="state" mode="in-out">
-      <button v-if="seen == true" @click="start()">그만하기</button>
+      <button v-if="seen == true" @click="close()">그만하기</button>
     </transition>
 
     <transition name="toggle">
       <div class="updown" v-if="seen">
-        <input type="Text" v-model.trim="msg" />
+        <input type="Text" v-model.trim="msg" id="msg"/>
         <button @click="updown(msg)" v-bind:disabled="able">확인</button>
         <br />
         <div>횟수 : {{guess}}</div>
@@ -49,7 +49,8 @@ export default {
       this.seen = !this.seen;
     },
     close: function() {
-      this.seen = !this.seen;
+	  this.seen = !this.seen;
+	  this.setGameover();
     },
     updown(msg) {
       if (this.guess < 10) {
@@ -62,12 +63,12 @@ export default {
           this.lastResult += this.msg + " ";
           this.lowOrHi = "down";
         } else if (msg == randomNumber) {
-          alert("정답입니다.처음부터 재시작 합니다.!");
-          this.setGameover();
+		  alert("정답입니다.처음부터 재시작 합니다.!");
+		  this.close();
         }
       } else if (this.guess == 10) {
         alert("횟수를 초과하였습니다. 처음부터 재시작합니다.!");
-        this.setGameover();
+        this.close();
       } else {
         console.log(randomNumber);
         console.log(msg);
@@ -79,7 +80,6 @@ export default {
       this.guess = 0;
       this.lastResult = "";
       this.lowOrHi = "";
-      this.close();
       randomNumber = Math.floor(Math.random() * 100) + 1;
     }
   }
