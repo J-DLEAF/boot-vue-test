@@ -25,7 +25,7 @@
       <div class='left' v-if='fade'>
         <ul>
           <li id='logo'>
-            <div>Inventory</div>
+            <div>Menu</div>
           </li>
           <li v-for='list in linklist' :key="list">
             <router-link :to='list.link' >{{ list.content }}</router-link>
