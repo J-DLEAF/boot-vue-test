@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div align="center">
     <ul>
       <li
         v-for="(v, index) in todoList"
@@ -51,6 +51,7 @@ export default {
 ul li {
   height: 3rem;
   border-radius: 5px;
+  width: 1000px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
   background-color: #fff;
   margin: 0.5rem 0;

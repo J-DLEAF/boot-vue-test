@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
     <div>
+      <h1>메인 페이지</h1>
       <router-link :to="'todoapp'">할일목록 가기</router-link><Br/>
-      <router-link :to="'datagrid'">DATAGRID</router-link><br/>
-      <router-link :to="'read'">게시판</router-link>
+      <router-link :to="'read'">게시판</router-link><br/>
+      <router-link :to="'updown'">업다운게임</router-link>
     </div>
   </div>
 </template>
@@ -13,7 +14,6 @@ export default {
   name: "main",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
     };
   },
   components: {
@@ -23,7 +23,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
+h1{
+  color: #89b983;
+}
 h2 {
   font-weight: normal;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div align="center">
     <input
       type="text"
       v-model.trim="todo"
@@ -8,7 +8,6 @@
       @keyup.enter="addTodo"
       maxlength="30"
     />
-    <button type="button" class="add-todo-btn" @click="addTodo">+</button>
   </div>
 </template>
 
@@ -33,7 +32,8 @@ export default {
 <style scoped>
 .todo-input {
   display: block;
-  width: 100%;
+  align-self: auto;
+  width: 1100px;
   height: 3rem;
   border-radius: 5px;
   margin: 0.8rem 0;

@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 #dclear-all {
-  width: 40%;
+  width: 30%;
   margin: 0 auto 0.5rem auto;
   height: 2.5rem;
   background-color: #fff;

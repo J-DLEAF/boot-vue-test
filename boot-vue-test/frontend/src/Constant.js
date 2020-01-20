@@ -4,5 +4,6 @@ export default {
   DELETE_ALL: 'deleteAll',
   DONE_TOGGLE: 'doneToggle',
   SHOW_LIST: 'showList',
-  DONE_ALL: 'doneAll'
+  DONE_ALL: 'doneAll',
+  UP_DOWN: 'updown'
 }

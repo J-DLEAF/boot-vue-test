@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div align="center">
         <!-- 테이블 형태로 구현-->
         <table>
             <tr>

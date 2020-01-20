@@ -49,11 +49,11 @@ export default {
   data () {
     return {
       fade: false,
-      version: ': MI ver 0.0.3',
       linklist: [
         { content: "HOME", link: "/main" },
         { content: "TODO APP", link: "/todoapp" },
-        { content: "BOARD", link: "/read" }
+        { content: "BOARD", link: "/read" },
+        { content: "UP & DOWN", link: "/updown" }
       ]
     }
   },
@@ -77,7 +77,7 @@ export default {
     height:50px; 
     position:relative; 
     background:#ffffff;
-    border-bottom:4px solid black;
+    border-bottom:4px solid #ffffff;
     z-index: 99;
     float:left;
     text-align: left; font-size:18px;
@@ -92,13 +92,8 @@ export default {
     outline: 0;
     }
 
-  .top #open{background:#000000; color:#ffffff; border:3px solid #ffffff; cursor: pointer}
-  .top #close{background:#ffffff; color:#000000; border:3px solid #000000; cursor: pointer}
-
-  .top ul li #search:focus {border:2px solid #ff889c}
-
-  .top ul li#top_logo {font-family: 'Passion One', cursive; font-size:33px; padding:8px 0 0 120px; width:200px}
-
+  .top #open{background:#ffffDC; color:#000000; border:3px solid #fffddc; }
+  .top #close{background:#ffffDC; color:#000000; border:3px solid #fffddc;}
   .state-enter-active , .state-leave-active{
     transition: all 0.5s;
     /* transition: opacity .5s; */
@@ -119,7 +114,7 @@ export default {
     position:relative; 
     width:300px;
     height:750px; 
-    background:#B085DC; 
+    background:#ffffdc; 
     padding:40px 0;
     border-bottom-right-radius: 25px;
     z-index: 9

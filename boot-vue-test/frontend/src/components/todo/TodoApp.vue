@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
   #todo-app {
-    margin: 0 0.5rem;
+    margin: 15;
     position: relative;
   }
   h1 {

@@ -4,10 +4,10 @@ import TodoApp from '@/components/todo/TodoApp'
 import Main from '@/components/Main'
 import Login from '@/components/Login'
 import Join from '@/components/join'
-import DataGrid from '@/components/DataGrid'
 import Read from '@/components/board/Read'
 import Create from '@/components/board/Create'
 import Detail from '@/components/board/Detail'
+import UpDown from '@/components/UpDown'
 
 Vue.use(Router)
 
@@ -35,11 +35,6 @@ export default new Router({
       component: Join
     },
     {
-      path: '/datagrid',
-      name: 'datagrid',
-      component: DataGrid
-    },
-    {
       path: '/read',
       name: 'Read',
       component: Read
@@ -53,6 +48,11 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: Detail
+    },
+    {
+      path: '/updown',
+      name: 'updown',
+      component: UpDown
     },
   ]
 })
