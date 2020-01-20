@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <div>
-      <router-link :to="'todoapp'">할일목록 가기</router-link>
+      <router-link :to="'todoapp'">할일목록 가기</router-link><Br/>
+      <router-link :to="'datagrid'">DATAGRID</router-link><br/>
+      <router-link :to="'read'">게시판</router-link>
     </div>
   </div>
 </template>

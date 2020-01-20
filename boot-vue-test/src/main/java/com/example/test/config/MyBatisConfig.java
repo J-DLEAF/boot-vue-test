@@ -16,7 +16,6 @@ public class MyBatisConfig {
 	@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
-
 		sqlSessionFactory.setDataSource(dataSource);
 		sqlSessionFactory.setTypeAliasesPackage("com.example.test.model");
 

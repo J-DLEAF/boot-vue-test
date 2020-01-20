@@ -29,22 +29,14 @@ public class LoginController {
 		User loginuser = service.getuser(user.getUserId());
 		System.out.println(loginuser);
 
-//		String key = "doyeob - doyeob - do";
+		String key = "doyeob - doyeob - do";
 //		
-		//암호화 - 복호화 테스트
-//		AES256Util aes = new AES256Util(key);
-//		String a = aes.encrypt(user.getUserPwd());
-//		System.out.println(a);
-//		System.out.println(aes.decrypt("plLI4uXrRWq51oTlkDerNQ=="));
-//		String pass = aes.decrypt(loginuser.getUserPwd());
-		if (loginuser == null) {
-			// 등록되지 않은 사용자
-			return "index";
-		} else if (user.getUserId().equals(loginuser.getUserId()) && user.getUserPwd().equals(loginuser.getUserPwd())) {
+//		암호화 - 복호화 테스트
+		AES256Util aes = new AES256Util(key);
+		String pass = aes.decrypt(loginuser.getUserPwd());
+		if (user.getUserId().equals(loginuser.getUserId()) && user.getUserPwd().equals(pass)) {
 			// 로그인 성공
-
-			model.addAttribute("user", loginuser);
-			return "test";
+			return "index";
 		} else {
 			// 패스워드 불일치
 			return "index";
