@@ -26,7 +26,7 @@
           <li id='logo'>
             <div>Menu</div>
           </li>
-          <li v-for='list in linklist' :key="list">
+          <li v-for='list in linklist' :key="list.index">
             <router-link :to='list.link' >{{ list.content }}</router-link>
           </li>
           <li id='company'>
@@ -62,7 +62,7 @@ export default {
     }
   },
   created () {
-    $(window).contextmenu(function () { })
+    
   }
 }
 </script>

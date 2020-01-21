@@ -1,8 +1,8 @@
 <template>
     <div>
-        <input v-model="writer" placeholder="글쓴이"/>
-        <input v-model="title" placeholder="제목"/>
-        <textarea v-model="content" placeholder="내용"/>
+        <input v-model="writer" placeholder="글쓴이"/><Br/>
+        <input v-model="title" placeholder="제목"/><Br/>
+        <textarea v-model="content" placeholder="내용"/><Br/>
         <!--작성 버튼을 누르면 write함수 실행-->
         <button @click="index !== undefined ? update() : write()">{{index !== undefined ? '수정' : '작성'}}</button>
     </div>
