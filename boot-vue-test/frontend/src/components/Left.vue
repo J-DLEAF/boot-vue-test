@@ -13,7 +13,6 @@
                  &lt; Close
               </button>
             </transition>
-        
         <div id='login'>
 
         </div>

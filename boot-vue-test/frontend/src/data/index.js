@@ -14,4 +14,5 @@ export default [
         title: '안녕히가세요',
         content: '세번째 글 입니다.'
     }
+    
 ]

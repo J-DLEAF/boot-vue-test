@@ -28,6 +28,7 @@ public class LoginController {
 		System.out.println(user);
 		User loginuser = service.getuser(user.getUserId());
 		System.out.println(loginuser);
+		session.setAttribute("userid", loginuser.getUserId());
 
 		String key = "doyeob - doyeob - do";
 //		
