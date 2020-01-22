@@ -6,23 +6,10 @@
 <Script src="/webjars/sockjs-client/sockjs.min.js"></Script>
 <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 <Script>
-	let socket = new SockJS("room1");
-	let stompClient = Stomp.over(socket);
-	stompClient.connect({}, function (frame) {
-		console.log("소켓 연결 성공", frame);
-	});
-	stompClient.subscribe("/topic/message", function (response) {
-		console.log(JSON.parse(reponse.body));
-	});
-	stompClient.send("/chat",{}, JSON.stringify({message: "hi"}));
-	stompClient.disconnect();
 </Script>
 
 <body>
 	<div id=app>
-		<H1>Thymeleaf test</H1>
-		<span th:text="${user.userId}"></span><br />
-		<span th:text="${user.name}"></span><br />
 	</div>
 </body>
 
