@@ -12,6 +12,7 @@
       <button @click="join()">회원가입!</button>
       <button @click="login()">Login</button>
     </form>
+    <a href="/test">socket test</a>
     <button @click="todo()">click here</button>
   </div>
 </template>
