@@ -49,7 +49,7 @@ export default {
     return {
       fade: false,
       linklist: [
-        { content: "HOME", link: "/main" },
+        { content: "HOME", link: "/" },
         { content: "TODO APP", link: "/todoapp" },
         { content: "BOARD", link: "/read" },
         { content: "UP & DOWN", link: "/updown" }

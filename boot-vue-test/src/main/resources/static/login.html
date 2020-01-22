@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <title>title</title>
+  <meta charset="UTF-8" />
+</head>
+<script type="text/javascript">
+  function join() {
+    alert("회원가입 페이지로 이동합니다");
+    location.href("locahost:8080/join")
+  }
+  function login() {
+    document.loginform.action = "login";
+    document.loginform.submit();
+  }
+</script>
+
+<body>
+  <div id="login">
+    <h1>로그인 / 회원가입 : <a href="/join">Join</a></h1> 
+    <!-- <button @click="todo()">click?</button>
+    <router-link :to="'todoapp'">router-link</router-link>-->
+    <form class="login" action="/login" method="POST" name="loginform">
+      <input placeholder="Enter your ID" name="userId" id="userId" />
+      <br />
+      <input type="password" placeholder="Enter your password" name="userPwd" id="userPwd" />
+      <br /> <button type="submit">Login</button>
+      <!-- <p>여기! [[${msg}]] ${msg}</p> -->
+    </form>
+
+
+
+  </div>
+</body>
+
+</html>

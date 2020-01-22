@@ -33,7 +33,7 @@ export default {
     },
     todo() {
       this.$router.push({
-        name: "main"
+        name: "/"
       });
     }
   },

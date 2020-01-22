@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.test.model.User;
 import com.example.test.service.LoginService;
@@ -17,10 +18,10 @@ public class LoginController {
 
 	@Autowired //
 	private LoginService service; //
-
-	@GetMapping("/login")
-	public String login(User user) {
-		return "index";
+	
+	@RequestMapping("/")
+	public String start() {
+		return "login";
 	}
 
 	@PostMapping("/login")
@@ -40,8 +41,13 @@ public class LoginController {
 			return "index";
 		} else {
 			// 패스워드 불일치
-			return "index";
+			return "redirect:/";
 		}
+	}
+	
+	@GetMapping("/join")
+	public String join() {
+		return "join";
 	}
 
 	@PostMapping("/join")

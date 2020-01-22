@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <left></left>
+    <main></main>
     <router-view/>
   </div>
 </template>
 
 <script>
 import Left from '@/components/Left'
+import Main from '@/components/Main'
 export default {
     name: 'App',
   components: {
-    Left
+    Left,
+    Main
   }
 }
 </script>
