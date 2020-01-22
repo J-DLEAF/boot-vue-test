@@ -3,19 +3,14 @@ package com.example.test.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.util.HtmlUtils;
 
 import com.example.test.model.User;
 import com.example.test.service.LoginService;
 import com.example.test.util.AES256Util;
-import com.example.websocket.Greeting;
-import com.example.websocket.HelloMessage;
 
 @Controller
 public class LoginController {
@@ -59,17 +54,6 @@ public class LoginController {
 		this.service.joinuser(user);
 		
 		return "index";
-	}
-	@GetMapping("/test")
-	public String test() {
-		return "test";
-	}
-	@MessageMapping("/hello")
-	@SendTo("/topic/greetings")
-	public Greeting greeting(HelloMessage message) throws Exception {
-		System.out.println("여기실행!");
-		Thread.sleep(1000); // simulated delay
-		return new Greeting("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
 	}
 
 }
