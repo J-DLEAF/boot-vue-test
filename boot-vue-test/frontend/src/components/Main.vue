@@ -4,7 +4,8 @@
       <h1>메인 페이지</h1>
       <router-link :to="'todoapp'">할일목록 가기</router-link><Br/>
       <router-link :to="'read'">게시판</router-link><br/>
-      <router-link :to="'updown'">업다운게임</router-link>
+      <router-link :to="'updown'">업다운게임</router-link><Br/>
+      <a href="/test">socket test</a>
     </div>
   </div>
 </template>
