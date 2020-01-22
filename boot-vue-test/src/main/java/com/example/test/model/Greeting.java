@@ -1,4 +1,4 @@
-package com.example.websocket;
+package com.example.test.model;
 
 public class Greeting {
 
